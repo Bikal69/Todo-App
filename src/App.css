@@ -1,0 +1,47 @@
+.modal-border{
+box-shadow: 0 0 18px #00ffdb;
+}
+.show{
+    transform:translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+.hide{
+    transform: translateY(-100vh);
+    transition: all 0.5s ease-in-out;
+}
+.modal-anim{
+    animation-name: modala;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+.delete-anim{
+    animation-name: deleteanimation;
+    animation-duration:1s;
+    animation-timing-function: ease-out;
+
+}
+.fadeout{
+    transform: scale(0.2);
+opacity: 0;
+transition: all;
+transition-duration: 0.4s;
+transition-timing-function: ease-out;
+
+}
+
+@keyframes modala {
+    from {
+        transform: scale(0) translateY(-100vh);
+    }
+
+    to {transform: scale(1) translateY(0);}
+  }
+
+  @keyframes deleteanimation {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+  }
